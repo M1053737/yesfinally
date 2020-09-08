@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+	<global-property doc:name="Global Property" doc:id="9bff804a-ab56-44a1-9585-3a8c7f6fe42b" name="env" value="local" />
+	<configuration-properties doc:name="Configuration properties" doc:id="05a29a7f-00ce-4e6b-b4cf-be0657a4e3da" file="${env}.properties" />
+	<api-gateway:autodiscovery apiId="${apiAutoDiscoveryId}" doc:name="API Autodiscovery" doc:id="c8a11fbf-8ea3-4fd1-9594-5e27bfe0543a" flowRef="yesfinally-flow" />
+</mule>
